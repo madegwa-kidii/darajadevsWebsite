@@ -1,0 +1,275 @@
+/* Header.module.css */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    border-bottom: 1px solid #e6e6e6;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+.logoIcon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #635bff 0%, #4f46e5 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.logoText {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0a2540;
+    letter-spacing: -0.02em;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.navLink {
+    color: #425466;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    position: relative;
+}
+
+.navLink:hover {
+    color: #0a2540;
+}
+
+.navLink::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #635bff;
+    transition: width 0.2s ease;
+}
+
+.navLink:hover::after {
+    width: 100%;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.userAvatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #635bff 0%, #4f46e5 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.userName {
+    color: #0a2540;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.menuButton {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: #425466;
+    transition: color 0.2s ease;
+}
+
+.menuButton:hover {
+    color: #0a2540;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .menuButton {
+        display: block;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+}
+
+/* Footer.module.css */
+.footer {
+    background: #f7f9fc;
+    border-top: 1px solid #e6e6e6;
+    margin-top: auto;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 48px 24px 32px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 48px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.columnTitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0a2540;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.link {
+    color: #425466;
+    font-size: 15px;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.link:hover {
+    color: #635bff;
+    transform: translateX(2px);
+}
+
+.bottom {
+    padding-top: 32px;
+    border-top: 1px solid #e6e6e6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brandIcon {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #635bff 0%, #4f46e5 100%);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.copyright {
+    color: #697386;
+    font-size: 14px;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.socialLink {
+    color: #697386;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialLink:hover {
+    color: #635bff;
+    transform: translateY(-2px);
+}
+
+.socialIcon {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+
+    .container {
+        padding: 32px 16px 24px;
+    }
+
+    .bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

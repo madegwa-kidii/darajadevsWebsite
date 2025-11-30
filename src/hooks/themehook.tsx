@@ -1,9 +1,9 @@
-import {createContext, type JSX, type ReactNode, useContext, useState} from "react";
+import {createContext, type Dispatch, type JSX, type ReactNode, type SetStateAction, useContext, useState} from "react";
 
 
 interface AuthContextProps {
     theme: string | undefined;
-    setTheme: (theme: string) => void;
+    setTheme: Dispatch<SetStateAction<string | undefined>>;
 }
 
 const themeContext = createContext<AuthContextProps | undefined>(undefined)

@@ -1,6 +1,6 @@
 import styles from './Header.module.css'
 import { Menu } from 'lucide-react';
-import { useAuth } from "../../hooks/authContext.tsx";
+import { useAuth } from "../../hooks/authhook.tsx";
 
 export default function Header() {
     const { user } = useAuth();

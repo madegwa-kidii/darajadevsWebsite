@@ -22,10 +22,7 @@ export const useAuth = () => {
     return ctx;
 };
 
-export default function AuthenticationProvider({children,initialUser}: {
-    children: React.ReactNode;
-    initialUser?: User;
-}): React.JSX.Element {
+export default function AuthenticationProvider({children,initialUser}: { children: React.ReactNode; initialUser?: User;}): React.JSX.Element {
     const [user, setUser] = useState<User | undefined>(initialUser);
     const [accessToken, setAccessToken] = useState<string>();
 

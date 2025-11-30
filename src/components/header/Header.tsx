@@ -9,8 +9,8 @@ export default function Header() {
         <header className={styles.header}>
             <div className={styles.container}>
                 <div className={styles.logo}>
-                    <div className={styles.logoIcon}>S</div>
-                    <span className={styles.logoText}>Stripe</span>
+                    <div className={styles.logoIcon}>D</div>
+                    <span className={styles.logoText}>Daraja Devs</span>
                 </div>
 
                 <nav className={styles.nav}>

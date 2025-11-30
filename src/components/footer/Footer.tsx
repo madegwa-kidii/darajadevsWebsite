@@ -49,7 +49,7 @@ export default function Footer() {
                 <div className={styles.bottom}>
                     <div className={styles.brand}>
                         <div className={styles.brandIcon}>S</div>
-                        <span className={styles.copyright}>© 2025 Stripe, Inc.</span>
+                        <span className={styles.copyright}>© 2025 Daraja Devs, Inc.</span>
                     </div>
 
                     <div className={styles.social}>
